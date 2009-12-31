@@ -1,0 +1,36 @@
+﻿	<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+		<PropertyGroup>
+			<ProjectGuid>{84E0AACA-9C43-49E6-870B-D16D13E65D44}</ProjectGuid>
+		</PropertyGroup>
+		<ItemGroup>
+			<Projects Include="cdkeyvault.dproj">
+				<Dependencies/>
+			</Projects>
+		</ItemGroup>
+		<ProjectExtensions>
+			<Borland.Personality>Default.Personality.12</Borland.Personality>
+			<Borland.ProjectType/>
+			<BorlandProject>
+				<Default.Personality/>
+			</BorlandProject>
+		</ProjectExtensions>
+		<Target Name="cdkeyvault">
+			<MSBuild Projects="cdkeyvault.dproj"/>
+		</Target>
+		<Target Name="cdkeyvault:Clean">
+			<MSBuild Targets="Clean" Projects="cdkeyvault.dproj"/>
+		</Target>
+		<Target Name="cdkeyvault:Make">
+			<MSBuild Targets="Make" Projects="cdkeyvault.dproj"/>
+		</Target>
+		<Target Name="Build">
+			<CallTarget Targets="cdkeyvault"/>
+		</Target>
+		<Target Name="Clean">
+			<CallTarget Targets="cdkeyvault:Clean"/>
+		</Target>
+		<Target Name="Make">
+			<CallTarget Targets="cdkeyvault:Make"/>
+		</Target>
+		<Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+	</Project>
