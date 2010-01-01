@@ -21,8 +21,8 @@ object Form1: TForm1
     ImageMargin.Bottom = 0
     ImageSize.Height = 0
     ImageSize.Width = 0
-    Left = 8
-    Top = 40
+    Left = 512
+    Top = 8
     object Men1: TMenuItem
       Caption = 'Men'#252
       object Passwortndern1: TMenuItem
@@ -299,6 +299,7 @@ object Form1: TForm1
           FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
           FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00}
         Caption = 'Upload'
+        OnClick = Upload1Click
       end
       object Download1: TMenuItem
         Bitmap.Data = {
@@ -339,13 +340,5 @@ object Form1: TForm1
         Caption = 'Download'
       end
     end
-  end
-  object IdFTP1: TIdFTP
-    IPVersion = Id_IPv4
-    AutoLogin = True
-    ProxySettings.ProxyType = fpcmNone
-    ProxySettings.Port = 0
-    Left = 48
-    Top = 40
   end
 end

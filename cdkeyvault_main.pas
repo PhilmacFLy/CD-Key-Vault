@@ -4,9 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, Menus, JvMenus, ToolWin, ComCtrls, JvExComCtrls, JvToolBar,
-  IdBaseComponent, IdComponent, IdTCPConnection, IdTCPClient,
-  IdExplicitTLSClientServerBase, IdFTP;
+  Dialogs, Menus, JvMenus, ToolWin, ComCtrls, JvExComCtrls, JvToolBar;
 
 type
   TForm1 = class(TForm)
@@ -23,7 +21,7 @@ type
     N3: TMenuItem;
     Upload1: TMenuItem;
     Download1: TMenuItem;
-    IdFTP1: TIdFTP;
+    procedure Upload1Click(Sender: TObject);
   private
     { Private-Deklarationen }
   public
@@ -35,6 +33,14 @@ var
 
 implementation
 
+uses
+cdkeyvault_upload;
+
 {$R *.dfm}
+
+procedure TForm1.Upload1Click(Sender: TObject);
+begin
+form2.ShowModal;
+end;
 
 end.
