@@ -1,0 +1,51 @@
+unit cdkeyvault_upload;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, jpeg, ExtCtrls, StdCtrls;
+
+type
+  TForm2 = class(TForm)
+    Image1: TImage;
+    lb_upload: TLabel;
+    ed_host: TLabeledEdit;
+    ed_verzeichnis: TLabeledEdit;
+    ed_user: TLabeledEdit;
+    ed_pw: TLabeledEdit;
+    cb_ologin: TCheckBox;
+    ed_ouser: TLabeledEdit;
+    ed_opw: TLabeledEdit;
+    Button1: TButton;
+    procedure cb_ologinClick(Sender: TObject);
+  private
+    { Private-Deklarationen }
+  public
+    { Public-Deklarationen }
+  end;
+
+var
+  Form2: TForm2;
+
+implementation
+
+{$R *.dfm}
+
+procedure TForm2.cb_ologinClick(Sender: TObject);
+begin
+if
+  cb_ologin.Checked
+then
+  begin
+    ed_ouser.Enabled := true;
+    ed_opw.Enabled := true;
+  end
+else
+  begin
+    ed_ouser.Enabled := false;
+    ed_opw.Enabled := false;
+  end;
+end;
+
+end.
