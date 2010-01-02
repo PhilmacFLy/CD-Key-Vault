@@ -25,7 +25,6 @@ type
     JvListView1: TJvListView;
     JvImageList1: TJvImageList;
     procedure Upload1Click(Sender: TObject);
-    procedure Hinzufgen1Click(Sender: TObject);
   private
     { Private-Deklarationen }
   public
@@ -38,14 +37,9 @@ var
 implementation
 
 uses
-cdkeyvault_upload, cdkeyvault_add;
+cdkeyvault_upload;
 
 {$R *.dfm}
-
-procedure TForm1.Hinzufgen1Click(Sender: TObject);
-begin
-form3.ShowModal;
-end;
 
 procedure TForm1.Upload1Click(Sender: TObject);
 begin

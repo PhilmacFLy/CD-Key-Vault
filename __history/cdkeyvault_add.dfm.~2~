@@ -1,0 +1,43 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 247
+  ClientWidth = 358
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 8
+    Width = 337
+    Height = 47
+    Caption = 'Key hinzufuegen'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -48
+    Font.Name = 'LCD'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 8
+    Top = 88
+    Width = 121
+    Height = 21
+    EditLabel.Width = 61
+    EditLabel.Height = 13
+    EditLabel.Caption = 'LabeledEdit1'
+    TabOrder = 0
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 320
+    Top = 56
+  end
+end

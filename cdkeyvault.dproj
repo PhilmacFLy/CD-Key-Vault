@@ -49,6 +49,9 @@
 			<DCCReference Include="cdkeyvault_upload.pas">
 				<Form>Form2</Form>
 			</DCCReference>
+			<DCCReference Include="cdkeyvault_add.pas">
+				<Form>Form3</Form>
+			</DCCReference>
 			<BuildConfiguration Include="Basis">
 				<Key>Base</Key>
 			</BuildConfiguration>

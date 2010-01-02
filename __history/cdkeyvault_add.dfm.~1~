@@ -1,0 +1,33 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 247
+  ClientWidth = 480
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 88
+    Top = 24
+    Width = 74
+    Height = 13
+    Caption = 'Key hinzuf'#252'gen'
+  end
+  object LabeledEdit1: TLabeledEdit
+    Left = 8
+    Top = 72
+    Width = 121
+    Height = 21
+    EditLabel.Width = 61
+    EditLabel.Height = 13
+    EditLabel.Caption = 'LabeledEdit1'
+    TabOrder = 0
+  end
+end

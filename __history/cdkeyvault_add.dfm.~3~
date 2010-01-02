@@ -1,0 +1,88 @@
+object Form3: TForm3
+  Left = 0
+  Top = 0
+  Caption = 'Form3'
+  ClientHeight = 211
+  ClientWidth = 358
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 8
+    Top = 8
+    Width = 337
+    Height = 47
+    Caption = 'Key hinzufuegen'
+    Font.Charset = ANSI_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -48
+    Font.Name = 'LCD'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object edIcon: TLabeledEdit
+    Left = 8
+    Top = 72
+    Width = 265
+    Height = 21
+    EditLabel.Width = 21
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Icon'
+    TabOrder = 0
+  end
+  object bttdurchsuchen: TButton
+    Left = 279
+    Top = 70
+    Width = 75
+    Height = 25
+    Caption = 'Durchsuchen'
+    TabOrder = 1
+    OnClick = bttdurchsuchenClick
+  end
+  object edName: TLabeledEdit
+    Left = 8
+    Top = 112
+    Width = 265
+    Height = 21
+    EditLabel.Width = 106
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Name der Anwendung'
+    TabOrder = 2
+  end
+  object edkey: TLabeledEdit
+    Left = 8
+    Top = 152
+    Width = 265
+    Height = 21
+    EditLabel.Width = 18
+    EditLabel.Height = 13
+    EditLabel.Caption = 'Key'
+    TabOrder = 3
+  end
+  object bttok: TButton
+    Left = 230
+    Top = 178
+    Width = 75
+    Height = 25
+    Caption = 'OK'
+    TabOrder = 4
+  end
+  object bttabbrechen: TButton
+    Left = 80
+    Top = 179
+    Width = 75
+    Height = 25
+    Caption = 'Abbrechen'
+    TabOrder = 5
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 312
+    Top = 16
+  end
+end
