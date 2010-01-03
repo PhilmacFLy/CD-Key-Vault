@@ -4,7 +4,7 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls;
+  Dialogs, StdCtrls, ExtCtrls, JvListView, ComCtrls;
 
 type
   TForm3 = class(TForm)
@@ -18,6 +18,7 @@ type
     bttabbrechen: TButton;
     procedure bttdurchsuchenClick(Sender: TObject);
     procedure bttabbrechenClick(Sender: TObject);
+    procedure bttokClick(Sender: TObject);
   private
     { Private-Deklarationen }
   public
@@ -29,6 +30,8 @@ var
 
 implementation
 
+uses
+cdkeyvault_main;
 {$R *.dfm}
 
 procedure TForm3.bttabbrechenClick(Sender: TObject);
@@ -40,6 +43,18 @@ procedure TForm3.bttdurchsuchenClick(Sender: TObject);
 begin
 if OpenDialog1.Execute then
   edicon.Text := Opendialog1.FileName;
+end;
+
+procedure TForm3.bttokClick(Sender: TObject);
+var
+test: TListitem;
+begin
+test := form1.ListView1.Items.Add;
+test.Caption := edName.Text;
+test.SubItems.Add(edkey.Text);
+edkey.Text := '';
+edName.Text := '';
+close;
 end;
 
 end.
