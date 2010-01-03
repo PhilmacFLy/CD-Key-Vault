@@ -74,6 +74,7 @@ object Form3: TForm3
     Height = 25
     Caption = 'OK'
     TabOrder = 4
+    OnClick = bttokClick
   end
   object bttabbrechen: TButton
     Left = 80
