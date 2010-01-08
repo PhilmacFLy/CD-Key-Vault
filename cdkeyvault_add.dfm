@@ -2,8 +2,8 @@ object Form3: TForm3
   Left = 0
   Top = 0
   Caption = 'Form3'
-  ClientHeight = 211
-  ClientWidth = 418
+  ClientHeight = 177
+  ClientWidth = 340
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -16,77 +16,54 @@ object Form3: TForm3
   object Label1: TLabel
     Left = 8
     Top = 8
-    Width = 402
+    Width = 321
     Height = 47
     Alignment = taCenter
     AutoSize = False
     Caption = 'Key hinzufuegen'
     Font.Charset = ANSI_CHARSET
     Font.Color = clWindowText
-    Font.Height = -48
+    Font.Height = -45
     Font.Name = 'LCD'
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object edIcon: TLabeledEdit
-    Left = 8
-    Top = 72
-    Width = 321
-    Height = 21
-    EditLabel.Width = 21
-    EditLabel.Height = 13
-    EditLabel.Caption = 'Icon'
-    TabOrder = 0
-  end
-  object bttdurchsuchen: TButton
-    Left = 335
-    Top = 70
-    Width = 75
-    Height = 25
-    Caption = 'Durchsuchen'
-    TabOrder = 1
-    OnClick = bttdurchsuchenClick
-  end
   object edName: TLabeledEdit
     Left = 8
-    Top = 112
+    Top = 80
     Width = 321
     Height = 21
     EditLabel.Width = 106
     EditLabel.Height = 13
     EditLabel.Caption = 'Name der Anwendung'
-    TabOrder = 2
+    TabOrder = 0
   end
   object edkey: TLabeledEdit
     Left = 8
-    Top = 152
+    Top = 120
     Width = 321
     Height = 21
     EditLabel.Width = 18
     EditLabel.Height = 13
     EditLabel.Caption = 'Key'
-    TabOrder = 3
+    TabOrder = 1
   end
   object bttok: TButton
-    Left = 286
-    Top = 178
+    Left = 238
+    Top = 147
     Width = 75
     Height = 25
     Caption = 'OK'
-    TabOrder = 4
+    TabOrder = 2
     OnClick = bttokClick
   end
   object bttabbrechen: TButton
-    Left = 80
-    Top = 179
+    Left = 64
+    Top = 147
     Width = 75
     Height = 25
     Caption = 'Abbrechen'
-    TabOrder = 5
+    TabOrder = 3
     OnClick = bttabbrechenClick
-  end
-  object OpenDialog1: TOpenDialog
-    Left = 312
-    Top = 16
   end
 end

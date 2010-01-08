@@ -4,19 +4,15 @@ interface
 
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
-  Dialogs, StdCtrls, ExtCtrls, JvListView, ComCtrls;
+  Dialogs, StdCtrls, ExtCtrls, JvListView, ComCtrls, Jpeg;
 
 type
   TForm3 = class(TForm)
-    edIcon: TLabeledEdit;
     Label1: TLabel;
-    OpenDialog1: TOpenDialog;
-    bttdurchsuchen: TButton;
     edName: TLabeledEdit;
     edkey: TLabeledEdit;
     bttok: TButton;
     bttabbrechen: TButton;
-    procedure bttdurchsuchenClick(Sender: TObject);
     procedure bttabbrechenClick(Sender: TObject);
     procedure bttokClick(Sender: TObject);
   private
@@ -39,19 +35,15 @@ begin
 Close;
 end;
 
-procedure TForm3.bttdurchsuchenClick(Sender: TObject);
-begin
-if OpenDialog1.Execute then
-  edicon.Text := Opendialog1.FileName;
-end;
-
 procedure TForm3.bttokClick(Sender: TObject);
 var
 test: TListitem;
 begin
+form1.ListView1.Items.BeginUpdate;
 test := form1.ListView1.Items.Add;
 test.Caption := edName.Text;
 test.SubItems.Add(edkey.Text);
+form1.ListView1.Items.EndUpdate;
 edkey.Text := '';
 edName.Text := '';
 close;
